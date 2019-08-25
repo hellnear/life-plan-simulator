@@ -1,0 +1,5 @@
+# conda
+numpy == 1.16.4
+pandas == 0.25.0
+# pip
+dash == 1.1.1
