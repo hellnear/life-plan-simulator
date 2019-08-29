@@ -105,3 +105,6 @@ venv.bak/
 
 # private files
 /app/private/
+
+# testdata
+/app/testdata/*.json

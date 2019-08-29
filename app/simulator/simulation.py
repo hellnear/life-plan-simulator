@@ -163,14 +163,20 @@ def calc_expense(params: dict,
             elif isinstance(i, list):
                 sum += sum_all(i)
         return sum
-    living = sum_all(params['expense']['monthly living'].values())
+    living = sum_all(params['expense']['monthly'].values())
 
     total_expense = np.ones(len(years)) * living * 12
     total_expense = pd.Series(total_expense, index=years, name='total')
 
     return pd.DataFrame([total_expense])
 
+def calc_tax(params_income: dict,
+             years: pd.Index):
+    # Monthly standard rewards
+
+    return
+
 if __name__ == '__main__':
-    with open('test.json', 'r') as f:
+    with open('testdata/family.json', 'r') as f:
         params = json.load(f)
     simulate(params)

@@ -6,11 +6,10 @@ import dash
 import dash_core_components as dcc
 import dash_html_components as html
 import dash_table
-from dash_table.Format import Format
 
 from simulator.simulation import simulate
 
-with open('test.json', 'r') as f:
+with open('testdata/family.json', 'r') as f:
     params = json.load(f)
 
 df = simulate(params=params, num_years=100)
