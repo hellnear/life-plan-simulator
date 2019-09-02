@@ -11,8 +11,10 @@ from simulator.simulation import simulate
 
 with open('testdata/family.json', 'r') as f:
     params = json.load(f)
+with open('testdata/tax.json', 'r') as f:
+    tax = json.load(f)
 
-df = simulate(params=params, num_years=100)
+df = simulate(params=params, tax=tax, num_years=70)
 display_unit = params['settings']['display unit']['unit']
 
 app = dash.Dash()
